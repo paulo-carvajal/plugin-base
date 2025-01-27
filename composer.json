@@ -1,0 +1,28 @@
+{
+  "name": "paulocarvajal/base-plugin",
+  "description": "A brief description of the plugin.",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Paulo Carvajal",
+      "email": "hola@paulocarvajal.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "scripts": {
+    "lint": "phpcs --standard=phpcs.xml -n  --ignore=vendor,node_modules .",
+    "fix": "phpcbf --standard=phpcs.xml -n --ignore=vendor,node_modules ."
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.11",
+    "wp-coding-standards/wpcs": "^3.1"
+  }
+}

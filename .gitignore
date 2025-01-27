@@ -1,0 +1,33 @@
+# Ignore IDE configs
+/.vscode
+/.idea
+
+# Ignore vendor directory
+/vendor/
+
+# Ignore node_modules directory
+/node_modules/
+
+# Composer credentials
+auth.json
+
+# Ignore log files
+*.log
+
+# If someone used sed-replace please ignore backup files
+*.bak
+
+# Ignore environment files
+.env
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Cache files.
+.cache
+.eslintcache
+.php_cs.cache
+.php-cs-fixer.cache
+.phpunit.result.cache
+.phpactor.json

@@ -1,0 +1,22 @@
+# Ignore node_modules directory
+node_modules
+
+# Ignore vendor directory
+vendor
+
+# Ignore build directory
+build
+
+# Ignore WordPress core files
+wp-admin
+wp-includes
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db

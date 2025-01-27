@@ -1,0 +1,40 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+trim_trailing_whitespace = true
+
+# 4 space indentation
+[*.php]
+indent_style = tab
+indent_size = 4
+
+# Tab indentation (default)
+[*.js]
+indent_style = space
+indent_size = 2
+
+# Matches the expected newline character(s) at the end of the file
+[*.md]
+trim_trailing_whitespace = false
+
+# Indentation for CSS files
+[*.css]
+indent_style = space
+indent_size = 2
+
+# Indentation for SCSS files
+[*.scss]
+indent_style = space
+indent_size = 2
+
+# Indentation for JSON files
+[*.json]
+indent_style = space
+indent_size = 4

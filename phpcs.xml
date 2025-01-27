@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<ruleset name="BasePlugin">
+    <description>The coding standard for My Plugin.</description>
+
+    <!-- Base settings -->
+    <arg name="basepath" value="."/>
+    <arg name="extensions" value="php"/>
+    <arg name="parallel" value="8"/>
+    <arg name="colors"/>
+    <arg name="encoding" value="utf-8"/>
+    <arg name="tab-width" value="4"/>
+
+    <!-- Include all PHP files in the project -->
+    <file>./</file>
+
+    <!-- Exclude vendor and node_modules directories -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+
+    <!-- Include WordPress coding standards -->
+    <rule ref="WordPress"/>
+    <rule ref="WordPress-Extra"/>
+    <rule ref="WordPress-Docs"/>
+    <rule ref="WordPress-Core"/>
+
+    <!-- Additional rules for better code quality -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols"/>
+    <rule ref="PSR2.Classes.PropertyDeclaration.Underscore"/>
+    <rule ref="PSR2.ControlStructures.ElseIfDeclaration.SpaceBeforeElseIfKeyword"/>
+    <rule ref="PSR2.Files.ClosingTag.NotAllowed"/>
+    <rule ref="PSR2.Methods.FunctionCallSignature.SpaceAfterMethodName"/>
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore"/>
+
+    <!-- Custom rules for better readability and maintainability -->
+    <rule ref="Squiz.Functions.FunctionDeclaration.SpaceBeforeSelf">
+        <properties>
+            <property name="spaces" value="1"/>
+        </properties>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing.Before"/>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing.After"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.StartFile"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EndFile"/>
+
+    <!-- Custom rules for better documentation -->
+    <rule ref="Generic.Commenting.Todo.Found"/>
+    <rule ref="Generic.Commenting.Fixme.Found"/>
+    <rule ref="Generic.Commenting.DocComment"/>
+
+    <!-- Custom rules for better security -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element value="eval"/>
+                <element value="exec"/>
+                <element value="system"/>
+                <element value="passthru"/>
+                <element value="shell_exec"/>
+                <element value="popen"/>
+                <element value="proc_open"/>
+                <element value="pcntl_exec"/>
+                <element value="assert"/>
+                <element value="create_function"/>
+            </property>
+        </properties>
+    </rule>
+</ruleset>
